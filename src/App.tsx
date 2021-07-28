@@ -16,6 +16,8 @@ const App = () => {
     csv(csvUrl).then(setData)
   }, []);
 
+  console.log(mostPopularBikes);
+
   return (
     <div>
       <h1 className='heading'>Most popular models</h1>
