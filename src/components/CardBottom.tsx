@@ -1,9 +1,9 @@
 import { BottomProps } from '../types';
 
-const CardBottom = ({ model, occurrences }: BottomProps) => {
+const CardBottom = ({ make, occurrences }: BottomProps) => {
   return (
     <div className='card-bottom'>
-      <h1 className='model'>{`${model[0].toUpperCase()}${model.slice(1)}`}</h1>
+      <h1 className='make'>{make}</h1>
       <p className='instock'>In stock: {occurrences}</p>
     </div>
   )

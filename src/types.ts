@@ -1,10 +1,10 @@
 export type TopProps = {
-    make: string
+    model: string
 }
 
 export type BottomProps = {
     occurrences: number
-    model: string
+    make: string
 }
 
 export type BikeProps = TopProps & BottomProps

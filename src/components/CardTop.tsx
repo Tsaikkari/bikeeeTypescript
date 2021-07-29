@@ -1,9 +1,9 @@
 import { TopProps } from '../types';
 
-const CardTop = ({ make }: TopProps) => {
+const CardTop = ({ model }: TopProps) => {
   return (
     <div className='card-top'>
-      <h4 className="make-name">{make}</h4>
+      <h4 className='model'>{`${model[0].toUpperCase()}${model.slice(1)}`}</h4>
     </div>
   )
 }

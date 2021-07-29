@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { csv } from 'd3';
 
 import Card from './components/Card';
+import Chart from './components/Chart';
 import useData from './hooks/useData';
+import useAlternative from './hooks/useAlternative';
 import './App.css';
 
 const csvUrl =
@@ -11,12 +13,11 @@ const csvUrl =
 const App = () => {
   const [data, setData] = useState<any[]>([]);
   const mostPopularBikes = useData(data);
+  const mostPopularByMake = useAlternative(data);
 
   useEffect(() => {
     csv(csvUrl).then(setData)
   }, []);
-
-  console.log(mostPopularBikes);
 
   return (
     <div>
@@ -33,6 +34,8 @@ const App = () => {
       ) : (
         'Loading...'
       )}
+      <h1 className='heading'>Most popular makes</h1>
+      <Chart data={mostPopularByMake} />
     </div>
   );
 }

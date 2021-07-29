@@ -1,0 +1,9 @@
+/* SVG */
+text {
+  fill: '#c0c0bb';
+}
+
+/* SVG */
+.tick text {
+  fill: '#c0c0bb' !important;
+}
