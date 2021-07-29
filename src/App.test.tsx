@@ -25,8 +25,8 @@ test('finds the most popular models', () => {
   });
   const popular = threeMostPopular(data);
   expect(popular).toBe([
-    {Model: "ec5", occurences: 4, Make: "Gudereit"},
-    {Model: "beryll", occurrences: 3, Make: "Diamant"},
-    {Model: "et9evo", occurrences: 2, Make: "Gudereit"}
+    {Model: "ec5", Occurences: 4, Make: "Gudereit"},
+    {Model: "beryll", Occurrences: 3, Make: "Diamant"},
+    {Model: "et9evo", Occurrences: 2, Make: "Gudereit"}
   ]);
 });

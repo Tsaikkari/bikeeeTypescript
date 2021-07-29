@@ -10,16 +10,16 @@ export const threeMostPopular = (data: any) => {
     let result = Object.values(
       bikes.reduce((row, { Model, Make }) => {
         if (row[Model] === undefined) {
-          row[Model] = { Model: Model, occurrences: 1, Make: Make }
+          row[Model] = { Model: Model, Occurrences: 1, Make: Make }
         } else {
-          row[Model].occurrences++
+          row[Model].Occurrences++
         }
         return row
       }, {})
     )
 
     result.sort((x: any, y: any) => {
-      return y.occurrences - x.occurrences
+      return y.Occurrences - x.Occurrences
     })
 
     return result.slice(0, 3)
@@ -38,18 +38,19 @@ export const threeMostPopularByMake = (data: any) => {
     let result = Object.values(
       bikes.reduce((row, { Make, Model }) => {
         if (row[Make] === undefined) {
-          row[Make] = { Make: Make, occurrences: 1, Model: Model }
+          row[Make] = { Make: Make, Occurrences: 1, Model: Model }
         } else {
-          row[Make].occurrences++
+          row[Make].Occurrences++
         }
         return row
       }, {})
     )
 
     result.sort((x: any, y: any) => {
-      return y.occurrences - x.occurrences
+      return y.Occurrences - x.Occurrences
     })
 
     return result.slice(0, 3)
   }
 }
+

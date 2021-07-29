@@ -15,6 +15,9 @@ const App = () => {
   const mostPopularBikes = useData(data);
   const mostPopularByMake = useAlternative(data);
 
+  console.log('mostPopularBikes', mostPopularBikes)
+  console.log('mostPopularByMake', mostPopularByMake)
+
   useEffect(() => {
     csv(csvUrl).then(setData)
   }, []);
@@ -25,9 +28,9 @@ const App = () => {
       {mostPopularBikes ? (
         mostPopularBikes.map((bike: any) => (
           <Card
-            key={bike.occurrences}
+            key={bike.Occurrences}
             model={bike.Model}
-            occurrences={bike.occurrences}
+            occurrences={bike.Occurrences}
             make={bike.Make}
           />
         ))

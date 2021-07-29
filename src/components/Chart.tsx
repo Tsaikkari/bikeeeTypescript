@@ -13,7 +13,7 @@ const Chart = ({ data }: any) => {
   const innerWidth = width - margin.left - margin.right
 
   const yValue = (d: any) => d.Make
-  const xValue = (d: any) => d.occurrences
+  const xValue = (d: any) => d.Occurrences
 
   const yScale = scaleBand()
     .domain(data.map(yValue))
@@ -21,11 +21,10 @@ const Chart = ({ data }: any) => {
     .paddingInner(0.13);
 
   const xScale = scaleLinear()
-    //@ts-ignore
-    .domain([0, max(data, xValue)])
-    .range([0, innerWidth])
+    .domain([0, max(data, xValue) as any])
+    .range([0, innerWidth]);
 
-  const xAxisTickFormat = (n: any) => {
+  const xAxisTickFormat = (n: number) => {
     let str = n.toString();
     if (str[2] === '5') {
       str.replace(str, '');

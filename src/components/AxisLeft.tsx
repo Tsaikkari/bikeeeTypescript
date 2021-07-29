@@ -5,7 +5,6 @@ export const AxisLeft = ({ yScale }: any) =>
       style={{ textAnchor: 'end', fill: '#635f5d' }}
       x={-3}
       dy='.32em'
-      //@ts-ignore
       y={yScale(tickValue) + yScale.bandwidth() / 2}
     >
       {tickValue.toUpperCase()}

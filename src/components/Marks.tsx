@@ -1,4 +1,4 @@
-export const Marks = ({ data, yScale, xScale, xValue, yValue, model }: any) =>
+export const Marks = ({ data, yScale, xScale, xValue, yValue }: any) =>
   data.map((d: any) => (
     <rect
       key={yValue(d)}
